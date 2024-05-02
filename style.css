@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Figtree:300,regular,500,600,700,800,900);
+
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--Yellow);
+  font-family: "Figtree";
+}
+
+
+#card{
+    margin: 20vh auto;
+    max-width: 20vw;
+    height: auto;
+    background-color: var(--White);
+    color: var(--Black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 1px black;
+    padding: 1.5em;
+    font-size: 1em;
+  }
+  
+  #card:hover {
+    box-shadow: 12px 12px 1px black; /* Change box shadow when h1 is active */
+  }
+
+  #card img{
+    border-radius: 1em;
+    max-width: 100%;
+  }
+  #card .header{
+    width: 100%;
+    margin-top: 1em;
+  }
+#card .header h5{
+  display: inline-block;
+  border-radius: .4em;
+  background-color: var(--Yellow);
+  padding: .7em 1.4em;
+  font-weight: 800;
+}
+#card .header p{
+  margin: .7em 0;
+  font-weight: 600;
+  font-size: .9rem;
+}
+#card .header h1{
+  font-size: 1.3rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s all;
+}
+
+#card .header h1:hover{
+  color: var(--Yellow);
+}
+
+
+
+
+#card .content{
+  margin: .7em 0;
+}
+
+
+#card .footer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#card .footer img{
+  height: 36px;
+}
+
+#card .footer h4{
+  font-weight: 800;
+}
+
+
+@media (max-width: 1300px) {
+  #card{
+    padding: 1em;
+    font-size: 12px;
+  }
+  #card .header h1{
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  #card{
+    max-width: 40vw;
+    font-size: .7em;
+  }
+}
+
+@media (max-width: 500px) {
+  #card{
+    max-width: 60vw;
+    /* font-size: .7em; */
+  }
+}
